@@ -1,6 +1,29 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+public boolean thatsOdd(int [] arr)
+{
+  Boolean[] result = new Boolean[arr.length];
+  int countoftrueodd=0;
+  for (int x=0; x<arr.length;x++)
+  {
+     if ((arr[x]%2)==0)
+     {
+     result[x]=false;
+     }
+     else{
+     result[x]=true;
+     }
+  }
+  for (int y=0; y<arr.length; y++)
+  {
+     if (result[y])
+     {
+        countoftrueodd++;
+     }
+  }
+  if (countoftrueodd==arr.length)
+  {
+  return true;
+  }
+  else{
+  return false;
+  }
+}
